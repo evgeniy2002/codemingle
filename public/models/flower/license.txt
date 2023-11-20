@@ -1,0 +1,11 @@
+Model Information:
+* title:	Margarita flower
+* source:	https://sketchfab.com/3d-models/margarita-flower-58ce34c65642408cb92eab784af2bd6c
+* author:	Maf'j Alvarez (https://sketchfab.com/blujay)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Margarita flower" (https://sketchfab.com/3d-models/margarita-flower-58ce34c65642408cb92eab784af2bd6c) by Maf'j Alvarez (https://sketchfab.com/blujay) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
