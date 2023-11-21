@@ -151,8 +151,11 @@ export const Preloader = () => {
       </div>
       <div className=" text-center">
         <div className="relative">
-          {'Code Mingle'.split('').map((item) => (
-            <span className="relative text-[70px] title top-0 max-md:text-[60px]" ref={setRef}>
+          {'Code Mingle'.split('').map((item, idx) => (
+            <span
+              key={idx}
+              className="relative text-[70px] title top-0 max-md:text-[60px]"
+              ref={setRef}>
               {item}
             </span>
           ))}

@@ -14,7 +14,7 @@ import { Works } from './components/Works';
 import { Home } from './components/Home';
 import { ContextProvider } from './components/context/Context';
 import { Contact } from './components/Contact';
-import { StartsCanvas } from './components/Stars';
+// import { StartsCanvas } from './components/Stars';
 
 function App() {
   return (
@@ -37,9 +37,9 @@ function App() {
         {window.innerWidth > 800 && <Cursor />}
       </ContextProvider>
 
-      <div>
+      {/* <div>
         <StartsCanvas />
-      </div>
+      </div> */}
     </div>
   );
 }
