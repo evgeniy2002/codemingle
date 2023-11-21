@@ -28,8 +28,6 @@ import { gsap } from 'gsap-trial/dist/gsap';
 import { ScrollTrigger } from 'gsap-trial/dist/ScrollTrigger';
 import { ContextPortfolio } from '../../context/Context';
 
-import music from '../../../assets/music/SkillsPage.mp3';
-
 gsap.registerPlugin(ScrollTrigger);
 
 const skillImages = [
@@ -515,7 +513,11 @@ export const SkillFrontend = () => {
             </div>
           </div>
         </div>
-        <audio src={music} ref={audioRef} autoPlay={true} loop></audio>
+        <audio
+          src={'https://assets.mixkit.co/music/preview/mixkit-ambient-251.mp3'}
+          ref={audioRef}
+          autoPlay={true}
+          loop></audio>
       </div>
     </>
   );

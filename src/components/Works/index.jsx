@@ -7,7 +7,6 @@ import world from '../../assets/icons/world.svg';
 import gsap from 'gsap';
 import { CanvasModel } from '../CanvasModel';
 import { ContextPortfolio } from '../context/Context';
-import music from '../../assets/music/ProjectsPage.mp3';
 
 export const Works = () => {
   const { setTitle: setModelTitle, audio } = React.useContext(ContextPortfolio);
@@ -347,7 +346,11 @@ export const Works = () => {
           </div>
         </div>
       </div>
-      <audio src={music} ref={audioRef} autoPlay={true} loop></audio>
+      <audio
+        src={'https://assets.mixkit.co/music/preview/mixkit-nature-meditation-345.mp3'}
+        ref={audioRef}
+        autoPlay={true}
+        loop></audio>
     </>
   );
 };

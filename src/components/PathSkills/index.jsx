@@ -4,7 +4,7 @@ import { useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ContextPortfolio } from '../context/Context';
-import music from '../../assets/music/MainPage.mp3';
+
 // const start = 'M 0 100 V 50 Q 50 0 100 50 V 100 z';
 let start = '';
 if (window.innerWidth > 768) {
@@ -161,7 +161,11 @@ export const PathSkills = () => {
           </animateMotion>
         </svg>
       </div>
-      <audio src={music} ref={audioRef} autoPlay={true} loop></audio>
+      <audio
+        src={'https://assets.mixkit.co/music/preview/mixkit-staring-at-the-night-sky-168.mp3'}
+        ref={audioRef}
+        autoPlay={true}
+        loop></audio>
     </div>
   );
 };

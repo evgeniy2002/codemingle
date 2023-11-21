@@ -2,7 +2,6 @@ import React, { useLayoutEffect } from 'react';
 
 import { gsap } from 'gsap-trial/dist/gsap';
 
-import music from '../../assets/music/ContactPage.mp3';
 import { ContextPortfolio } from '../context/Context';
 import { Link } from 'react-router-dom';
 
@@ -147,7 +146,11 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <audio src={music} ref={audioRef} autoPlay={true} loop></audio>
+      <audio
+        src={'https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-493.mp3'}
+        ref={audioRef}
+        autoPlay={true}
+        loop></audio>
     </div>
   );
 };

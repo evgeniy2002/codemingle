@@ -4,8 +4,6 @@ import { gsap } from 'gsap-trial/dist/gsap';
 
 import { ScrollTrigger } from 'gsap-trial/dist/ScrollTrigger';
 
-import music from '../../assets/music/AboutPage.mp3';
-
 import frontend from '../../assets/frontend.gif';
 import hard from '../../assets/hard.gif';
 import ok from '../../assets/ok.gif';
@@ -333,7 +331,11 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <audio src={music} ref={audioRef} autoPlay={true} loop></audio>
+      <audio
+        src={'https://assets.mixkit.co/music/preview/mixkit-irenko-177.mp3'}
+        ref={audioRef}
+        autoPlay={true}
+        loop></audio>
     </section>
   );
 };
