@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "react-scripts --max_old_space_size=4096 build"
   },
   "dependencies": {
     "@react-three/drei": "9.75.0",
