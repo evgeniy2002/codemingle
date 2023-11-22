@@ -54,7 +54,7 @@ const skillImages = [
   ubuntu,
 ];
 
-export const SkillFrontend = () => {
+export default function SkillFrontend() {
   const { audio } = React.useContext(ContextPortfolio);
 
   const [years, setYears] = React.useState(0);
@@ -521,4 +521,4 @@ export const SkillFrontend = () => {
       </div>
     </>
   );
-};
+}

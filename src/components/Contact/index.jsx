@@ -5,7 +5,7 @@ import { gsap } from 'gsap-trial/dist/gsap';
 import { ContextPortfolio } from '../context/Context';
 import { Link } from 'react-router-dom';
 
-export const Contact = () => {
+export default function Contact() {
   let tween;
 
   const marquee = React.useRef();
@@ -115,7 +115,10 @@ export const Contact = () => {
         className="flex justify-center items-center pt-32 mb-10 w-full opacity-0 overflow-hidden max-sm:mb-0"
         ref={marquee}>
         {Array.from({ length: 6 }).map((_, index) => (
-          <div className="flex gap-[2rem] mr-10 max-sm:gap-[1rem] max-sm:mr-0" ref={setRef}>
+          <div
+            key={index}
+            className="flex gap-[2rem] mr-10 max-sm:gap-[1rem] max-sm:mr-0"
+            ref={setRef}>
             <p className="contact__text text-[12rem]  uppercase whitespace-nowrap mr-4">
               Lets talk
             </p>
@@ -153,4 +156,4 @@ export const Contact = () => {
         loop></audio>
     </div>
   );
-};
+}

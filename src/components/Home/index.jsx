@@ -11,7 +11,7 @@ import { ContextPortfolio } from '../context/Context';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const Home = () => {
+export default function Home() {
   const { audio } = React.useContext(ContextPortfolio);
 
   let tl = React.useRef();
@@ -338,4 +338,4 @@ export const Home = () => {
         loop></audio>
     </section>
   );
-};
+}

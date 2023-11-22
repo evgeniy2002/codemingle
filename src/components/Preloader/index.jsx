@@ -147,7 +147,7 @@ export const Preloader = () => {
           ref={count}>
           {counter}%
         </h1>
-        <div className="absolute  top-0 w-full h-full after:absolute after:-top-[120px] max-md:after:-top-[70px] after:left-0 after:w-[105%] after:h-[105%] after:bg-gray-950 "></div>
+        <div className="absolute  top-0 w-full h-full after:absolute after:-top-[120px] max-md:after:-top-[70px] after:left-0 after:w-[105%] after:h-[100%] after:bg-gray-950 "></div>
       </div>
       <div className=" text-center">
         <div className="relative">
@@ -161,7 +161,7 @@ export const Preloader = () => {
           ))}
         </div>
 
-        <div className="mt-12 ">
+        <div className="mt-12 relative z-[2]">
           <img
             src={headphones}
             alt=""

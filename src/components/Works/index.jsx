@@ -8,7 +8,7 @@ import gsap from 'gsap';
 import { CanvasModel } from '../CanvasModel';
 import { ContextPortfolio } from '../context/Context';
 
-export const Works = () => {
+export default function Works() {
   const { setTitle: setModelTitle, audio } = React.useContext(ContextPortfolio);
 
   const [projects, setProjects] = React.useState([]);
@@ -337,7 +337,9 @@ export const Works = () => {
                   <span className=" font-bold pr-5">Skills:</span>
                   <ul className="text-gray-400 whitespace-nowrap max-[800px]:whitespace-normal">
                     {skills.map((item) => (
-                      <li className="text-[18px] mb-1">{item}</li>
+                      <li className="text-[18px] mb-1" key={item}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -353,4 +355,4 @@ export const Works = () => {
         loop></audio>
     </>
   );
-};
+}

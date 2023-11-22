@@ -1,35 +1,63 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Info } from './components/Info';
 import { Cursor } from './components/Cursor';
 
 import { Header } from './components/Header';
-import { SkillFrontend } from './components/SkillCircle/SkillFrontend';
 
 import { PathSkills } from './components/PathSkills';
 import { Preloader } from './components/Preloader';
 
-import { Works } from './components/Works';
-import { Home } from './components/Home';
 import { ContextProvider } from './components/context/Context';
-import { Contact } from './components/Contact';
-// import { StartsCanvas } from './components/Stars';
+import { StartsCanvas } from './components/Stars';
 
-function App() {
+const WorksPage = React.lazy(() => import('./components/Works'));
+const SkillFrontendPage = React.lazy(() => import('./components/SkillCircle/SkillFrontend'));
+const AboutPage = React.lazy(() => import('./components/Home'));
+const ContactPage = React.lazy(() => import('./components/Contact'));
+
+export default function App() {
   return (
     <div
       className="relative  bg-gray-950 min-h-screen  text-white
     ">
       <ContextProvider>
         <Header />
-
         <Routes>
           <Route path="/" element={<PathSkills />} />
-          <Route path="/projects" element={<Works />} />
-          <Route path="/skills/" element={<SkillFrontend />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<Home />} />
+          <Route
+            path="/projects"
+            element={
+              <Suspense fallback={null}>
+                <WorksPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/skills"
+            element={
+              <Suspense fallback={null}>
+                <SkillFrontendPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense fallback={null}>
+                <AboutPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={null}>
+                <ContactPage />
+              </Suspense>
+            }
+          />
         </Routes>
 
         <Info />
@@ -37,11 +65,9 @@ function App() {
         {window.innerWidth > 800 && <Cursor />}
       </ContextProvider>
 
-      {/* <div>
+      <div>
         <StartsCanvas />
-      </div> */}
+      </div>
     </div>
   );
 }
-
-export default App;
