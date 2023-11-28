@@ -131,7 +131,7 @@ export default function Contact() {
           </div>
         ))}
       </div>
-      <div className="container">
+      <div className="container ">
         <div className="flex items-end  justify-between max-sm:block ">
           <div className="contact__desc max-w-sm ">
             <p className=" relative top-[20px] text-gray-200  text-[16px] max-sm:text-[18px]">
@@ -140,7 +140,7 @@ export default function Contact() {
           </div>
 
           <div className="contact__link flex  gap-12 pl-10 max-sm:pl-0 max-sm:mt-20 ">
-            <Link to={'https://github.com/evgeniy2002'} className="text-[18px]">
+            <Link to={'https://github.com/evgeniy2002'} target="_blank" className="text-[18px]">
               Github
             </Link>
             <Link to={'mailto:evgenij.kobzev2002@inbox.ru'} className="text-[18px]">

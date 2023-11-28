@@ -43,19 +43,10 @@ export const Preloader = () => {
         duration: 0.6,
         stagger: {
           from: 'center',
-          each: 0.04,
+          each: 0.02,
         },
       });
 
-      gsap.to(
-        text.current,
-        {
-          top: -30,
-          opacity: 0,
-          duration: 1,
-        },
-        '<',
-      );
       gsap.to(
         sound.current,
         {
@@ -76,16 +67,16 @@ export const Preloader = () => {
     }
   }, [enableSound]);
 
-  React.useEffect(() => {
+  useLayoutEffect(() => {
     gsap.fromTo(
       headPhones.current,
       {
         opacity: 0.2,
       },
       {
-        scale: 1.2,
+        scale: 1.05,
         opacity: 1,
-        duration: 1.5,
+        duration: 2,
         yoyo: true,
         repeat: -1,
       },
@@ -150,30 +141,20 @@ export const Preloader = () => {
         <div className="absolute  top-0 w-full h-full after:absolute after:-top-[120px] max-md:after:-top-[70px] after:left-0 after:w-[105%] after:h-[100%] after:bg-gray-950 "></div>
       </div>
       <div className=" text-center">
-        <div className="relative">
-          {'Code Mingle'.split('').map((item, idx) => (
-            <span
-              key={idx}
-              className="relative text-[70px] title top-0 max-md:text-[60px]"
-              ref={setRef}>
-              {item}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-12 relative z-[2]">
+        <div className="mt-12 ">
           <img
             src={headphones}
             alt=""
-            className="relative w-8 h-8 mx-auto z-[2]"
+            className="relative w-[4.5rem]  mx-auto z-[2] max-md:w-[4rem]"
             ref={headPhones}
           />
-          <div className="relative">
-            <p
-              className="font-bold uppercase text-[18px] mt-5 relative top-0 max-md:text-[14px]"
-              ref={text}>
-              grab a pair of headphones and enjoy
-            </p>
+          <div className="relative mt-10">
+            {'use handphones for better experience'.split('').map((item) => (
+              <span className=" text-[18px]  relative top-0 max-md:text-[14px]" ref={setRef}>
+                {item}
+              </span>
+            ))}
+
             <div className="absolute  top-0 w-full h-full after:absolute after:-top-[30px] max-md:after:-top-[30px]  after:left-0 after:w-[105%] after:h-[105%] after:bg-gray-950 "></div>
           </div>
           <div
